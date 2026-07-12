@@ -1,0 +1,143 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Notify HA Plus",
+        "description": "Einrichtung des gruppenfähigen Benachrichtigungsdienstes.\n\nKlicke nach der Einrichtung auf **Konfigurieren** auf der Integrations-Karte, um Personen, Geräte und Gruppen hinzuzufügen."
+      },
+      "setup_menu": {
+        "title": "Notify HA Plus einrichten",
+        "description": "Füge jetzt Personen und Geräte hinzu. Du kannst alles später über Konfigurieren ändern.",
+        "menu_options": {
+          "add_person": "Person hinzufügen",
+          "add_device": "Gerät hinzufügen (z.B. Alexa-Lautsprecher)",
+          "manage_targets": "Eintrag bearbeiten / entfernen",
+          "volume_settings": "Lautstärke- & Kanaleinstellungen",
+          "finish_setup": "Einrichtung abschließen"
+        }
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Notify HA Plus ist bereits eingerichtet."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Notify HA Plus",
+        "description": "Alle Änderungen werden sofort gespeichert.",
+        "menu_options": {
+          "add_person": "Person hinzufügen",
+          "add_device": "Gerät hinzufügen (z.B. Alexa-Lautsprecher)",
+          "manage_targets": "Eintrag bearbeiten / entfernen",
+          "volume_settings": "Lautstärke- & Kanaleinstellungen"
+        }
+      },
+      "add_person": {
+        "title": "Person hinzufügen",
+        "data": {
+          "person_entity": "Person",
+          "notify_service": "Notify-Dienst",
+          "groups": "Gruppen (z.B. admin, family)",
+          "device_tracker_entity": "Zusätzlicher Anwesenheits-Tracker (optional)"
+        },
+        "data_description": {
+          "device_tracker_entity": "Eine vorhandene device_tracker-Entität (z.B. aus einer Router-/Nmap-/UniFi-/FRITZ!Box-Integration), die zusätzlich zum Status der Person-Entität für 'anwesend'/'abwesend' ausgewertet wird."
+        }
+      },
+      "add_device": {
+        "title": "Gerät hinzufügen",
+        "data": {
+          "name": "Anzeigename",
+          "notify_service": "Notify-Dienst",
+          "groups": "Gruppen (z.B. alexa)"
+        }
+      },
+      "manage_targets": {
+        "title": "Eintrag zum Bearbeiten wählen",
+        "data": {
+          "target_id": "Eintrag"
+        }
+      },
+      "edit_target": {
+        "title": "{name} bearbeiten",
+        "data": {
+          "notify_service": "Notify-Dienst",
+          "groups": "Gruppen",
+          "device_tracker_entity": "Zusätzlicher Anwesenheits-Tracker (optional)",
+          "remove": "Diesen Eintrag entfernen"
+        }
+      },
+      "volume_settings": {
+        "title": "Alexa-Lautstärkeeinstellungen",
+        "description": "Lautstärke für Alexa-Ansagen (0.0 – 1.0) und der Android-Benachrichtigungskanal für lautlose Meldungen.",
+        "data": {
+          "volume_normal": "Lautstärke für normale Benachrichtigungen",
+          "volume_critical": "Lautstärke für kritische Benachrichtigungen",
+          "volume_after": "Lautstärke nach der Ansage",
+          "silent_channel": "Android-Kanal für lautlose Benachrichtigungen"
+        }
+      }
+    },
+    "error": {
+      "person_already_added": "Diese Person wurde bereits hinzugefügt.",
+      "no_targets": "Es sind noch keine Personen oder Geräte konfiguriert."
+    }
+  },
+  "services": {
+    "send_notification": {
+      "name": "Benachrichtigung senden",
+      "description": "Sendet eine Benachrichtigung an ein oder mehrere Notify HA Plus Ziele.",
+      "fields": {
+        "target": {
+          "name": "Ziel",
+          "description": "Eine oder mehrere Notify HA Plus Ziel-Entitäten (Personen, Gruppen oder Anwesenheits-Ziele)."
+        },
+        "message": {
+          "name": "Nachricht",
+          "description": "Der Benachrichtigungstext."
+        },
+        "title": {
+          "name": "Titel",
+          "description": "Optionaler Titel."
+        },
+        "image_path": {
+          "name": "Bild",
+          "description": "Optionaler Pfad zu einem JPEG/PNG-Bild."
+        },
+        "video_path": {
+          "name": "Video",
+          "description": "Optionaler Pfad zu einem MP4-Video."
+        },
+        "live_stream_url": {
+          "name": "Live-Stream-URL",
+          "description": "Optionaler RTSP/MJPEG-Link als Aktions-Button."
+        },
+        "dashboard_url": {
+          "name": "Dashboard-URL",
+          "description": "Optionaler Link zu einer Dashboard-Ansicht als Aktions-Button."
+        },
+        "tag": {
+          "name": "Kennung (per clear_notification)",
+          "description": "Kennung zum späteren Löschen dieser Benachrichtigung."
+        },
+        "ttl": {
+          "name": "TTL",
+          "description": "Ablaufzeit in Sekunden (0-3600)."
+        },
+        "priority": {
+          "name": "Priorität",
+          "description": "Priorität der Benachrichtigung."
+        },
+        "critical": {
+          "name": "Kritisch",
+          "description": "Kritische/unterbrechende Benachrichtigung mit erhöhter Alexa-Lautstärke."
+        },
+        "silent": {
+          "name": "Kein Sound",
+          "description": "Unterdrückt den Benachrichtigungston."
+        }
+      }
+    }
+  }
+}

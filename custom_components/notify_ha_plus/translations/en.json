@@ -1,0 +1,143 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Notify HA Plus",
+        "description": "Set up the group-aware notification dispatcher.\n\nAfter setup, click **Configure** on the integration card to add persons, devices and groups."
+      },
+      "setup_menu": {
+        "title": "Set up Notify HA Plus",
+        "description": "Add persons and devices now. You can change everything later via Configure.",
+        "menu_options": {
+          "add_person": "Add person",
+          "add_device": "Add device (e.g. Alexa speaker)",
+          "manage_targets": "Edit / remove entry",
+          "volume_settings": "Volume & channel settings",
+          "finish_setup": "Finish setup"
+        }
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Notify HA Plus is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Notify HA Plus",
+        "description": "All changes are saved immediately.",
+        "menu_options": {
+          "add_person": "Add person",
+          "add_device": "Add device (e.g. Alexa speaker)",
+          "manage_targets": "Edit / remove entry",
+          "volume_settings": "Volume & channel settings"
+        }
+      },
+      "add_person": {
+        "title": "Add person",
+        "data": {
+          "person_entity": "Person",
+          "notify_service": "Notify service",
+          "groups": "Groups (e.g. admin, family)",
+          "device_tracker_entity": "Additional presence tracker (optional)"
+        },
+        "data_description": {
+          "device_tracker_entity": "An existing device_tracker entity (e.g. from a router/Nmap/UniFi/FRITZ!Box integration) used in addition to the person entity's state to decide 'home'/'away'."
+        }
+      },
+      "add_device": {
+        "title": "Add device",
+        "data": {
+          "name": "Display name",
+          "notify_service": "Notify service",
+          "groups": "Groups (e.g. alexa)"
+        }
+      },
+      "manage_targets": {
+        "title": "Choose entry to edit",
+        "data": {
+          "target_id": "Entry"
+        }
+      },
+      "edit_target": {
+        "title": "Edit {name}",
+        "data": {
+          "notify_service": "Notify service",
+          "groups": "Groups",
+          "device_tracker_entity": "Additional presence tracker (optional)",
+          "remove": "Remove this entry"
+        }
+      },
+      "volume_settings": {
+        "title": "Alexa volume settings",
+        "description": "Volume levels for Alexa (0.0 – 1.0) and the Android notification channel used for silent notifications.",
+        "data": {
+          "volume_normal": "Normal notification volume",
+          "volume_critical": "Critical notification volume",
+          "volume_after": "Volume after the announcement",
+          "silent_channel": "Android silent channel name"
+        }
+      }
+    },
+    "error": {
+      "person_already_added": "This person has already been added.",
+      "no_targets": "No persons or devices configured yet."
+    }
+  },
+  "services": {
+    "send_notification": {
+      "name": "Send notification",
+      "description": "Sends a notification to one or more Notify HA Plus targets.",
+      "fields": {
+        "target": {
+          "name": "Target",
+          "description": "One or more Notify HA Plus target entities (persons, groups, or presence-based targets)."
+        },
+        "message": {
+          "name": "Message",
+          "description": "The notification text."
+        },
+        "title": {
+          "name": "Title",
+          "description": "Optional notification title."
+        },
+        "image_path": {
+          "name": "Image",
+          "description": "Optional path to a JPEG/PNG image."
+        },
+        "video_path": {
+          "name": "Video",
+          "description": "Optional path to an MP4 video."
+        },
+        "live_stream_url": {
+          "name": "Live stream URL",
+          "description": "Optional RTSP/MJPEG link as action button."
+        },
+        "dashboard_url": {
+          "name": "Dashboard URL",
+          "description": "Optional link to a dashboard view as action button."
+        },
+        "tag": {
+          "name": "Tag (per clear_notification)",
+          "description": "Identifier for later clearing this notification."
+        },
+        "ttl": {
+          "name": "TTL",
+          "description": "Time to live in seconds (0-3600)."
+        },
+        "priority": {
+          "name": "Priority",
+          "description": "Notification priority."
+        },
+        "critical": {
+          "name": "Critical",
+          "description": "Critical/interruptive notification with raised Alexa volume."
+        },
+        "silent": {
+          "name": "Silent",
+          "description": "Suppress notification sound."
+        }
+      }
+    }
+  }
+}

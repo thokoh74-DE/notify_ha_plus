@@ -1,0 +1,60 @@
+send_notification:
+  fields:
+    target:
+      required: true
+      example: '["notify.nhp_gruppe_family"]'
+      selector:
+        entity:
+          integration: notify_ha_plus
+          domain: notify
+          multiple: true
+    message:
+      required: true
+      example: "Garagentor ist seit 10 Minuten offen"
+      selector:
+        text:
+          multiline: true
+    title:
+      selector:
+        text:
+    image_path:
+      example: "/media/local/haustuer.jpg"
+      selector:
+        text:
+    video_path:
+      example: "/media/local/haustuer.mp4"
+      selector:
+        text:
+    live_stream_url:
+      selector:
+        text:
+    dashboard_url:
+      selector:
+        text:
+    tag:
+      example: "garage_tor"
+      selector:
+        text:
+    ttl:
+      default: 0
+      selector:
+        number:
+          min: 0
+          max: 3600
+          step: 1
+    priority:
+      default: high
+      selector:
+        select:
+          options:
+            - high
+            - normal
+            - low
+    critical:
+      required: true
+      selector:
+        boolean:
+    silent:
+      required: true
+      selector:
+        boolean:
