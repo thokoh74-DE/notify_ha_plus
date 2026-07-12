@@ -1,0 +1,39 @@
+name: Bug Report
+description: Report a bug with Notify HA Plus
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill in the details below.
+  - type: input
+    id: ha_version
+    attributes:
+      label: Home Assistant Version
+      placeholder: "2026.7.0"
+    validations:
+      required: true
+  - type: input
+    id: integration_version
+    attributes:
+      label: Notify HA Plus Version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      placeholder: A clear description of the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      render: text
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics (Settings → Devices → Notify HA Plus → Download diagnostics)
+      render: json

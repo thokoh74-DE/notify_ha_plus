@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: "Build & Publish Release"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: "Update version in manifest"
+        run: |
+          version="${{ github.event.release.tag_name }}"
+          version="${version#v}"
+          jq --arg v "$version" '.version = $v' \
+            custom_components/notify_ha_plus/manifest.json > tmp.json
+          mv tmp.json custom_components/notify_ha_plus/manifest.json
+
+      - name: "Commit version bump"
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add custom_components/notify_ha_plus/manifest.json
+          git commit -m "chore: bump version to ${{ github.event.release.tag_name }}"
+          git push origin HEAD:main
+
+      - name: "Create release ZIP"
+        run: |
+          cd custom_components/notify_ha_plus
+          zip -r ../../notify_ha_plus.zip .
+
+      - name: "Upload release asset"
+        uses: softprops/action-gh-release@v3
+        with:
+          files: notify_ha_plus.zip
