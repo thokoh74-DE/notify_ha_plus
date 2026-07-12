@@ -1,9 +1,7 @@
 {
   "domain": "notify_ha_plus",
   "name": "Notify HA Plus",
-  "codeowners": [
-    "@thokoh74-DE"
-  ],
+  "codeowners": ["@thokoh74-DE"],
   "config_flow": true,
   "documentation": "https://github.com/thokoh74-DE/notify-ha-plus",
   "iot_class": "calculated",

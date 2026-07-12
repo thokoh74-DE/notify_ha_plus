@@ -49,9 +49,9 @@ Gruppenfahiger Benachrichtigungsdienst fur Home Assistant. Stellt eine vollwerti
 
 #### HACS (empfohlen)
 
-[![In HACS oeffnen](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=thokoh74-DE&repository=notifiy_ha_plus&category=integration)
+[![In HACS oeffnen](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=thokoh74-DE&repository=notify_ha_plus&category=integration)
 
-Oder manuell: **HACS** -> **Integrationen** -> **Drei-Punkte-Menu** -> **Benutzerdefinierte Repositories** -> `https://github.com/thokoh74-DE/notifiy_ha_plus` als Integration hinzufugen.
+Oder manuell: **HACS** -> **Integrationen** -> **Drei-Punkte-Menu** -> **Benutzerdefinierte Repositories** -> `https://github.com/thokoh74-DE/notify_ha_plus` als Integration hinzufugen.
 
 #### Manuell
 
@@ -156,9 +156,9 @@ Group-aware notification dispatcher for Home Assistant. Provides a proper integr
 
 #### HACS (recommended)
 
-[![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=thokoh74-DE&repository=notifiy_ha_plus&category=integration)
+[![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=thokoh74-DE&repository=notify_ha_plus&category=integration)
 
-Or manually: **HACS** -> **Integrations** -> **Three-dot menu** -> **Custom repositories** -> add `https://github.com/thokoh74-DE/notifiy_ha_plus` as Integration.
+Or manually: **HACS** -> **Integrations** -> **Three-dot menu** -> **Custom repositories** -> add `https://github.com/thokoh74-DE/notify_ha_plus` as Integration.
 
 #### Manual
 
@@ -236,8 +236,8 @@ await hass.services.async_call(
 
 ## Links
 
-- **GitHub**: [thokoh74-DE/notifiy_ha_plus](https://github.com/thokoh74-DE/notifiy_ha_plus)
-- **Issues**: [Bug Reports & Feature Requests](https://github.com/thokoh74-DE/notifiy_ha_plus/issues)
+- **GitHub**: [thokoh74-DE/notify_ha_plus](https://github.com/thokoh74-DE/notify_ha_plus)
+- **Issues**: [Bug Reports & Feature Requests](https://github.com/thokoh74-DE/notify_ha_plus/issues)
 - **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 
 ---
@@ -245,15 +245,15 @@ await hass.services.async_call(
 <!-- Badge references -->
 [hacs-badge]: https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge
 [hacs-url]: https://github.com/hacs/integration
-[release-badge]: https://img.shields.io/github/v/release/thokoh74-DE/notifiy_ha_plus?style=for-the-badge
-[release-url]: https://github.com/thokoh74-DE/notifiy_ha_plus/releases/latest
-[license-badge]: https://img.shields.io/github/license/thokoh74-DE/notifiy_ha_plus?style=for-the-badge
-[license-url]: https://github.com/thokoh74-DE/notifiy_ha_plus/blob/main/LICENSE
-[hassfest-badge]: https://img.shields.io/github/actions/workflow/status/thokoh74-DE/notifiy_ha_plus/hassfest.yml?label=Hassfest&style=for-the-badge
-[hassfest-url]: https://github.com/thokoh74-DE/notifiy_ha_plus/actions/workflows/hassfest.yml
-[hacs-val-badge]: https://img.shields.io/github/actions/workflow/status/thokoh74-DE/notifiy_ha_plus/hacs.yml?label=HACS&style=for-the-badge
-[hacs-val-url]: https://github.com/thokoh74-DE/notifiy_ha_plus/actions/workflows/hacs.yml
-[codeql-badge]: https://img.shields.io/github/actions/workflow/status/thokoh74-DE/notifiy_ha_plus/codeql.yml?label=CodeQL&style=for-the-badge
-[codeql-url]: https://github.com/thokoh74-DE/notifiy_ha_plus/actions/workflows/codeql.yml
-[downloads-badge]: https://img.shields.io/github/downloads/thokoh74-DE/notifiy_ha_plus/total?style=for-the-badge
-[downloads-url]: https://github.com/thokoh74-DE/notifiy_ha_plus/releases
+[release-badge]: https://img.shields.io/github/v/release/thokoh74-DE/notify_ha_plus?style=for-the-badge
+[release-url]: https://github.com/thokoh74-DE/notify_ha_plus/releases/latest
+[license-badge]: https://img.shields.io/github/license/thokoh74-DE/notify_ha_plus?style=for-the-badge
+[license-url]: https://github.com/thokoh74-DE/notify_ha_plus/blob/main/LICENSE
+[hassfest-badge]: https://img.shields.io/github/actions/workflow/status/thokoh74-DE/notify_ha_plus/hassfest.yml?label=Hassfest&style=for-the-badge
+[hassfest-url]: https://github.com/thokoh74-DE/notify_ha_plus/actions/workflows/hassfest.yml
+[hacs-val-badge]: https://img.shields.io/github/actions/workflow/status/thokoh74-DE/notify_ha_plus/hacs.yml?label=HACS&style=for-the-badge
+[hacs-val-url]: https://github.com/thokoh74-DE/notify_ha_plus/actions/workflows/hacs.yml
+[codeql-badge]: https://img.shields.io/github/actions/workflow/status/thokoh74-DE/notify_ha_plus/codeql.yml?label=CodeQL&style=for-the-badge
+[codeql-url]: https://github.com/thokoh74-DE/notify_ha_plus/actions/workflows/codeql.yml
+[downloads-badge]: https://img.shields.io/github/downloads/thokoh74-DE/notify_ha_plus/total?style=for-the-badge
+[downloads-url]: https://github.com/thokoh74-DE/notify_ha_plus/releases
