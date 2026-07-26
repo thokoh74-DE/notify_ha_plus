@@ -1,5 +1,13 @@
 # Changelog / Änderungsprotokoll
 
+## [1.0.1] – 2025-07-26
+
+### Behoben / Fixed
+- **manifest.json**: `documentation`- und `issue_tracker`-URLs korrigiert (`notify-ha-plus` → `notify_ha_plus`). Der Hilfe-Link in Home Assistant führte auf ein nicht existierendes Repository. / Fixed `documentation` and `issue_tracker` URLs in manifest (`notify-ha-plus` → `notify_ha_plus`). The help link in Home Assistant pointed to a non-existent repository.
+- **hacs.json**: `zip_release: true` hinzugefügt, damit HACS zuverlässig das Release-ZIP statt des Git-Trees verwendet. / Added `zip_release: true` so HACS reliably uses the release ZIP instead of the raw git tree.
+
+---
+
 ## [1.0.0] – 2025-07-12
 
 ### Neu / Added
